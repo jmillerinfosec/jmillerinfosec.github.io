@@ -1,4 +1,31 @@
 <!doctype html>
+<style>
+.flex-container {
+    display: flex !important;
+}
+
+.flex-child {
+    flex: 3;
+    /*border: 2px solid yellow;*/
+}
+
+article {
+    margin-right: 20px;
+}
+
+#table-of-contents {
+    flex: 1;
+    border-left: 1px #eee solid;
+    margin-left: 30px
+}
+
+@media screen and (max-width:990px) {
+  .flex-container { flex-wrap: wrap; flex-direction: column-reverse; }
+  .flex-child:first-child { flex-basis: 100%; }
+  #table-of-contents { margin-left: 0px }
+}
+
+</style>
 <html lang="en">
   <head>
       <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
@@ -60,21 +87,7 @@
 
 
     </main>
-    
-
-
-
-<!-- Pagination links
-<div class="pagination">
-  
-  <span class="page_number ">
-    Page 1 of 1
-  </span>
-  
-</div>
--->
-
-<nav class="pagination" role="pagination">
+    <nav class="pagination" role="pagination">
   
 
   

@@ -1,4 +1,31 @@
 <!doctype html>
+<style>
+.flex-container {
+    display: flex !important;
+}
+
+.flex-child {
+    flex: 3;
+    /*border: 2px solid yellow;*/
+}
+
+article {
+    margin-right: 20px;
+}
+
+#table-of-contents {
+    flex: 1;
+    border-left: 1px #eee solid;
+    margin-left: 30px
+}
+
+@media screen and (max-width:990px) {
+  .flex-container { flex-wrap: wrap; flex-direction: column-reverse; }
+  .flex-child:first-child { flex-basis: 100%; }
+  #table-of-contents { margin-left: 0px }
+}
+
+</style>
 <html lang="en">
   <head>
       <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
@@ -49,44 +76,75 @@
 
     </header>
     <main id="content">
-      <article id="" class="">
-	<div class="post-stamp">01 December 2022
-<span class="taglist">
-
-
-    
-    <a href="/tag/writeup"><span><nobr>writeup</nobr></span>&nbsp;</a>
-  
-    
-    <a href="/tag/notes"><span><nobr>notes</nobr></span>&nbsp;</a>
-  
-
-</span></div>
-	<h1 class="post-title">TryHackMe: Linux Privilege Escalation</h1>
-	<p>…</p>
+      <article id="" class=" ">
+<div class="post-stamp">01 December 2022
+	<span class="taglist">
 
 	
+	    
+	    <a href="/tag/writeup"><span><nobr>writeup</nobr></span>&nbsp;</a>
+	  
+	    
+	    <a href="/tag/notes"><span><nobr>notes</nobr></span>&nbsp;</a>
+	  
+
+	</span>
+</div>
+<h1 class="post-title">TryHackMe: Linux Privilege Escalation</h1>
+
+<div class="flex-container">
+<div id="main-contents" class="flex-child">
+	<h2 id="task-1">Task 1</h2>
+<p>Getting privilege escalation on a target can depend on:</p>
+<ul>
+  <li>kernal version</li>
+  <li>installed applications</li>
+</ul>
+
+<h2 id="task-2">Task 2</h2>
+<ul>
+  <li>asdf</li>
+  <li>asdf</li>
+</ul>
+
+<h2 id="task-3">Task 3</h2>
+<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+
+<h3 id="task-31">Task 3.1</h3>
+<p>asdf</p>
+
+<h3 id="task-32">Task 3.2</h3>
+<p>asdfsadf</p>
+
+</div>
+
+
+<div id="table-of-contents" class="flex-child">
+<ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#task-1">Task 1</a></li>
+<li class="toc-entry toc-h2"><a href="#task-2">Task 2</a></li>
+<li class="toc-entry toc-h2"><a href="#task-3">Task 3</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#task-31">Task 3.1</a></li>
+<li class="toc-entry toc-h3"><a href="#task-32">Task 3.2</a></li>
+</ul>
+</li>
+</ul>
+</div>
+	
+
+
+</div>
+	
+
 </article>
+
 <!-- Begin Comments Code -->
 
 <!-- End Comments Code -->
 
     </main>
-    
-
-
-
-<!-- Pagination links
-<div class="pagination">
-  
-  <span class="page_number ">
-    Page  of 
-  </span>
-  
-</div>
--->
-
-<nav class="pagination" role="pagination">
+    <nav class="pagination" role="pagination">
   
 
   
