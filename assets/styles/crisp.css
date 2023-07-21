@@ -5,9 +5,9 @@
 /* Basic Typography */
 html, body {
 	font-size: 1em;
-	line-height: 1.65em;
+	line-height: 1.4em;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	color:#444;
 }
 html {
@@ -39,32 +39,32 @@ footer {
 article {
 	border-bottom: 0.1em #eee solid;
 	padding-bottom: 1.7em;
-	max-width:1200px;
+	/*max-width:1200px;*/
 }
 p, hr, h4, h5, h6 {
-	margin-top: 0.9em;
-	margin-bottom: 0.9em;
+	margin-top: 0.0em;
+	margin-bottom: 0.0em;
 }
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Bree Serif", serif;
-	font-weight: 400 !important;
+	/*font-family: "Bree Serif", serif;*/
+	font-weight: 600 !important;
 }
 h1 {
-	font-size: 2.5em;
+	font-size: 1.5em;
 	line-height: 1.1em;
 	margin-top: 0.6em;
 	margin-bottom: 0.6em;
 }
 h2 {
-	font-size:1.9em;
-	line-height: 1.2em;
-	margin-top: 0.7em;
+	font-size:1.15em;
+	line-height: 1.1em;
+	margin-top: 1.5em;
 	margin-bottom: 0.7em;
 }
 h3 {
-	font-size:1.4em;
-	line-height: 1.3em;
+	font-size:1.05em;
+	line-height: 1.1em;
 	margin-top: 0.8em;
 	margin-bottom: 0.8em;
 }
@@ -75,25 +75,25 @@ h5 {
 	font-size:1.2em;
 }
 h6 {
-	font-size:1.1em;
+	font-size:1.0em;
 }
 /* Page Elements */
 img, iframe {
 	max-width: 100%;
 }
 a {
-	font-weight:700;
+	font-weight:400;
 	text-decoration:none;
-	color: #D49F6E; /* Change Link Color */
+	color: #2196F3  /* Change Link Color #D49F6E */ ;
 }
 a:hover {
 	text-decoration:underline;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	font-weight:400 !important;
+	font-weight:600 !important;
 }
 strong {
-	font-weight: 700;
+	font-weight: 500;
 }
 blockquote {
 	border-left: 0.4em solid #eee;
@@ -109,11 +109,11 @@ ul, ol {
 	margin-left: 3em;
 }
 code {
-	font-size:1.4em;
+	font-size:1.1em;
 	background: #eee;
 }
 pre {
-	font-size: 0.8em;
+	font-size: 1em;
 	line-height: 2em;
 	background: #eee;
 	padding: 1em;
@@ -130,9 +130,9 @@ input {
 }
 /* Sidebar */
 header h1 {
-	font-size:1.9em;
+	font-size:1.5em;
 	margin-top:0.8em;
-	margin-bottom:0.6em;
+	margin-bottom:1.0em;
 }
 header h1 a {
 	color:#444;
@@ -180,7 +180,7 @@ h3.post-title {
 	margin-top:0.4em;
 	padding-bottom:0.9em;
 	border-bottom: 1px solid #eee;
-	font-size: 1.2em;
+	font-size: 1.0em;
 	color: #444;
 }
 .post-title .feature-star {
@@ -229,7 +229,7 @@ footer a:hover {
 /* Large Screens */
 @media only screen and (min-width: 1281px) {
 	html, body {
-		font-size: 1.1em;
+		font-size: 1.0em;
 	}
 }
 /* Small Screens */
@@ -272,7 +272,7 @@ footer a:hover {
 }
 
 
-.highlight  { background: #ffffff; }
+/*.highlight  { background: #ffffff; }*/
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
@@ -332,3 +332,89 @@ footer a:hover {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+.flex-container {
+    display: flex !important;
+}
+
+.flex-child {
+    flex: 3;
+    /*border: 2px solid yellow;*/
+}
+
+article {
+    margin-right: 20px;
+}
+
+#table-of-contents {
+    flex: 1;
+    border-left: 1px #eee solid;
+    margin-left: 30px
+}
+
+
+@media screen and (max-width:1700px) {
+  .flex-container { flex-wrap: wrap; flex-direction: column-reverse; }
+	.flex-child:first-child { flex-basis: 100%; }
+  #table-of-contents { margin-left: 0px; border-left: 0px; }
+	ul#toc {margin-left: 0em;}
+}
+
+
+@media screen and (min-width:1701px) {
+	/*#toc.section-nav {*/
+/*	#toctest {*/
+#toc.section-nav{
+		/*position:fixed;
+		width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+		margin-right: 35px !important;*/
+	}
+
+	#table-of-contents{
+		position: fixed;
+		margin-left: 990px;
+		width: -webkit-calc(100% - 1360px);
+    width:    -moz-calc(100% - 1360px);
+    width:         calc(100% - 1360px);
+	}
+}
+
+
+@media screen and (max-width:1920px) {
+
+
+}
+
+#main-contents {max-width: 960px;}
+
+#toc.section-nav {
+    border: solid 1px gray;
+    padding: 10px 10px 10px 30px;
+    font-size: 0.85em;
+    background-color: #f3f3f3;
+    line-height: 1.45em;
+		margin-bottom: 1.5em;
+}
+
+#table-of-contents>ul:before{
+content: "Contents";
+font-size: 1.1em;
+font-weight: 600;
+line-height: 1.6em;
+}
+
+::marker {
+    font-size: 0.8em;
+}
+
+.post-date{
+	display:inline-block;
+	font-weight: 300;
+}
+
+div .highlighter-rouge {
+    margin-top: 0.5em;
+		margin-bottom: 1em;
+}
